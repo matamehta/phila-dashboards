@@ -1,14 +1,17 @@
 ---
-title: Department Dashboard
-summary: With Web Components and libraries like Polymer.js you can easily build dashboards with no JavaScript at all. View the source to see how easy it can be to build a dashboad with no JavaScript at all!
+title: Department Dashboard MVP
+summary: A brief overview of analytics relevant to department content
 ---
 
 <!doctype html>
 <html>
 <head>
   <title>City of Philadelphia &mdash; Analytics Dashboard</title>
+  <link rel="stylesheet" href="//cityofphiladelphia.github.io/patterns/dist/0.11.1/css/patterns.css">
+  <link rel='icon' type='image/x-icon' href="//cityofphiladelphia.github.io/patterns/images/favicon.ico">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:700,400,300' rel='stylesheet'>
   <link rel="stylesheet" href="assets/css/main.css">
-
   <script src="assets/js/platform.js"></script>
   <link rel="import" href="elements/ga-auth.html">
   <link rel="import" href="elements/ga-dashboard.html">
@@ -18,15 +21,14 @@ summary: With Web Components and libraries like Polymer.js you can easily build 
 <!--  {% include ga-snippet.html %}-->
 </head>
 <body>
-
   <header class="Banner">
-    <h1 class="Banner-title">
-      <a href="{{ site.path }}/">City of Philadelphia</a>
-      <em>{{ page.title }}</em>
-    </h1>
+    <div class="small-24 medium-24 column">
+      <a href="http://alpha.phila.gov"><img src="//cityofphiladelphia.github.io/patterns/images/city-of-philadelphia-logo.png" class="logo no-scale" alt="City of Philadelphia"></a>
+      <h1 class="page-title"><a href="#">{{ page.title }}</a></h1>
+    </div>   
     <ga-auth clientid="{{ site.client_id }}"></gauth>
   </header>
-
+  <div class="divider"></div>
   <ga-dashboard>
 
     <section id="controls">
@@ -46,15 +48,15 @@ summary: With Web Components and libraries like Polymer.js you can easily build 
       </ga-chart>
 
       <ga-chart
-        title="Sessions (by country)"
-        type="GEO"
+        title="Operating System"
+        type="PIE"
         metrics="ga:sessions"
-        dimensions="ga:country">
+        dimensions="ga:operatingSystem">
       </ga-chart>
 
       <ga-chart
         title="Top Browsers"
-        type="COLUMN"
+        type="BAR"
         metrics="ga:sessions"
         dimensions="ga:browser"
         sort="-ga:sessions"
@@ -65,7 +67,7 @@ summary: With Web Components and libraries like Polymer.js you can easily build 
         title="Top pages"
         type="TABLE"
         metrics="ga:sessions"
-        dimensions="ga:pagePath"
+        dimensions="ga:pageTitle"
         sort="-ga:sessions"
         maxResults="8">
       </ga-chart>
@@ -75,5 +77,13 @@ summary: With Web Components and libraries like Polymer.js you can easily build 
 
 {% include source-link.html %}
 
+<!-- End Footer -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!--<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.1/js/foundation.min.js"></script>-->
+<!--<script src="//cityofphiladelphia.github.io/patterns/dist/0.11.1/js/patterns.min.js"></script>-->
+<script>
+  $(document).foundation();
+</script>
 </body>
 </html>

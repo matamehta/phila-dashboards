@@ -2,9 +2,11 @@ source: ./src
 destination: ./site
 
 # For running locally the path string should be empty.
-path: /
+path: 
 
 # Update this with your client ID.
 # https://developers.google.com/analytics/devguides/reporting/embed/v1/devguide#client-id
-client_id: 735213377869-o2oefvgnddn00pb9vtse10p4otsf7621.apps.googleusercontent.com
+client_id: 105615440679-gh40q67kbtufs7ko34ptbd6uah36ti7a.apps.googleusercontent.com
 
+# In Google Developers Console, project name is 
+# Phila Dashboards

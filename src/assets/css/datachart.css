@@ -1,7 +1,8 @@
 .gapi-analytics-data-chart-table-styles-thr,
 .gapi-analytics-data-chart-table-styles-tr {
   font:inherit;
-  text-align:right
+  text-align:right;
+  width: inherit
 }
 .gapi-analytics-data-chart-table-styles-thr {
   font-weight:700
