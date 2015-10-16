@@ -1,16 +1,21 @@
 .gapi-analytics-auth-styles-signinbutton {
   display:inline-block;
   float: right;
-  background:#f7991c;
-  color:#fff;
   width:200px;
   border-radius:2px;
-  white-space:nowrap
+  white-space:nowrap;
+  background: #027EA4;
+  color: #fff;
+  border: 1px solid #9299A5;
+  margin-top: -0.8em;
 }
 .gapi-analytics-auth-styles-signinbutton:hover {
-  background:#ff9d27;
-  cursor:hand
+  background:#fff;
+  cursor:hand;
+  border: 2px #027EA4 solid; 
+  color: black;
 }
+/*
 .gapi-analytics-auth-styles-signinbutton-image {
   background:url("//www.gstatic.com/analytics-api/access-analytics-iconv1.png") transparent 5px 50% no-repeat;
   display:inline-block;
@@ -19,27 +24,32 @@
   height:30px;
   border-right:#db8321 1px solid
 }
+*/
 .gapi-analytics-auth-styles-signinbutton-buttonText {
   display:inline-block;
+  float: right;
   vertical-align:middle;
-  padding-left:15px;
-  padding-right:15px;
+  padding: 10px 15px;
   font-size:12px;
-  font-weight:bold;
-  font-family:Roboto, arial, sans-serif
+/*  font-weight:bold;*/
+  font-family:Montserrat, sans-serif;
+  text-transform: uppercase;
+  margin-right: -4px;
+  letter-spacing: 0.2;
 }
 .gapi-analytics-auth-styles-userinfo {
   width:200px;
   height:30px;
   font-size:12px;
   font-weight:bold;
-  color:#0a5ae5;
+  color: black;
   font-family:Open Sans, arial, sans-serif;
-  background:#f2f2f2;
+  background:#fff;
   text-align:center;
   overflow:hidden;
   text-overflow:ellipsis;
   line-height:30px;
-  white-space:nowrap
-  float: right;
+  white-space:nowrap;
+  display: block;
+  float: right!important;
 }
