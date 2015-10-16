@@ -24,9 +24,9 @@ summary: A brief overview of analytics relevant to department content
   <header class="Banner">
     <div class="small-24 medium-24 column">
       <a href="http://alpha.phila.gov"><img src="//cityofphiladelphia.github.io/patterns/images/city-of-philadelphia-logo.png" class="logo no-scale" alt="City of Philadelphia"></a>
-      <h1 class="page-title"><a href="#">{{ page.title }}</a></h1>
-    </div>   
+      <span class="page-title">{{ page.title }}</span>
     <ga-auth clientid="{{ site.client_id }}"></gauth>
+    </div>   
   </header>
   <div class="divider"></div>
   <ga-dashboard>
@@ -59,6 +59,15 @@ summary: A brief overview of analytics relevant to department content
         type="BAR"
         metrics="ga:sessions"
         dimensions="ga:browser"
+        sort="-ga:sessions"
+        maxResults="5">
+      </ga-chart>
+            
+      <ga-chart
+        title="Devices"
+        type="PIE"
+        metrics="ga:sessions"
+        dimensions="ga:deviceCategory"
         sort="-ga:sessions"
         maxResults="5">
       </ga-chart>
