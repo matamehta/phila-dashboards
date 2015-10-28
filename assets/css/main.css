@@ -302,7 +302,7 @@ a:hover {
 
 .Button {
   border: 1px solid #2F5BB7;
-  border-radius: 2px;
+/*  border-radius: 2px;*/
   background: #498cf6;
   color: #fff;
   cursor: pointer;
@@ -335,7 +335,7 @@ a:hover {
 }
 .Datepicker-item input {
   border: 1px solid #ccc;
-  border-radius: 4px;
+/*  border-radius: 4px;*/
   box-sizing: border-box;
   font: inherit;
   font-weight: 400;
@@ -383,7 +383,7 @@ a:hover {
  */
 .SourceLink {
   clear: both;
-  display: none;
+/*  display: none;*/
 /*  padding: 0 1.5em 1.5em;*/
   white-space: nowrap;
 }
@@ -478,5 +478,11 @@ a:hover {
 
 }
 
+.google-visualization-table-table {
+  
+}
 
+.ga-chart>h1 {
+
+}
 
