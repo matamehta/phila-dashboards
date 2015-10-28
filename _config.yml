@@ -1,7 +1,10 @@
 destination: ./site
 
+baseurl: /phila-dashboards
+
 # For running locally the path string should be empty.
-path: /phila-dashboards
+# path:
+
 
 # Update this with your client ID.
 # https://developers.google.com/analytics/devguides/reporting/embed/v1/devguide#client-id
