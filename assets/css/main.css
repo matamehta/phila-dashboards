@@ -164,6 +164,7 @@ a:hover {
   padding: 0 1.5em 1.2em 1.5em;
   width: 100%;
 }
+/*
 .Banner-title {
   display: table-cell;
   font-size: 1.667em;
@@ -182,6 +183,7 @@ a:hover {
   margin-left: .5em;
   opacity: .6;
 }
+*/
 .Banner-auth {
   color: #ccc;
   display: table-cell;
@@ -284,7 +286,7 @@ a:hover {
 }
 .Viewpicker-item select {
   border: 1px solid #ccc;
-  border-radius: 4px;
+/*  border-radius: 0px;*/
   box-sizing: border-box;
   height: 34px;
   line-height: 20px;
@@ -458,10 +460,12 @@ a:hover {
 
 /*Customizations*/
 
+/*
 .logo {
   width: 176px;
   float: left;
 }
+*/
 
 .page-title {
   font-family: 'Montserrat-Regular', sans-serif!important;
