@@ -484,6 +484,7 @@ table {
   width:100%;
   border-spacing: 2px;
   border:none;
+  cellpadding: 3;
 
   &.no-borders {
     border-spacing:0;
