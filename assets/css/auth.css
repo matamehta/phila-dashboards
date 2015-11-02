@@ -1,13 +1,13 @@
 .gapi-analytics-auth-styles-signinbutton {
   display:inline-block;
-  float: right;
+  right: 20px;
   width:200px;
   border-radius:2px;
   white-space:nowrap;
   background: #027EA4;
   color: #fff;
   border: 1px solid #9299A5;
-  margin-top: -0.8em;
+  margin-top: 1.7em;
 }
 .gapi-analytics-auth-styles-signinbutton:hover {
   background:#fff;

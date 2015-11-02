@@ -6,19 +6,22 @@
 }
 .gapi-analytics-data-chart-table-styles-thr {
   font-weight:700
+  background:
 }
 .gapi-analytics-data-chart-table-styles-tr {
   background:#f8f8f8
 }
 .gapi-analytics-data-chart-table-styles-tr-hover {
-  background-color:#fffce8
+  background-color: #fffce8
 }
 .gapi-analytics-data-chart-table-styles-tr-selected {
-  background-color:#e5f3f9
+  background-color: #e5f3f9
 }
 .gapi-analytics-data-chart-table-styles-th {
   border-bottom:1px solid #e8e8e8;
-  padding:12px 8px 3px!important
+  padding:12px 8px 3px!important;
+  text-align: center;
+  
 }
 .gapi-analytics-data-chart-table-styles-td {
   padding:8px 8px 7px!important
@@ -30,4 +33,18 @@
 .gapi-analytics-data-chart-table-styles-th:first-child,
 .gapi-analytics-data-chart-table-styles-td:first-child {
   text-align:left
+}
+
+  .gapi-analytics-data-chart-table-styles-th, .gapi-analytics-data-chart-table-styles-td, .gapi-analytics-data-chart-table-styles-tr {
+    padding:0.5625rem 0.625rem;
+    font-size:rem-calc(12);
+  }
+  tr.even, tr.alt,
+  tr:nth-of-type(even) {
+    background-color:$geyser;
+  }
+  tr.odd, tr, tr:nth-of-type(odd) {
+    background-color:$ghost-gray;
+  }
+
 }
