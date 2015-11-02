@@ -6,6 +6,7 @@ summary: Tracking PDF document downloads for your department
 <!doctype html>
 <html>
 <head>
+  
   <title>City of Philadelphia &mdash; Analytics Dashboard</title>
   <link rel="stylesheet" href="//cityofphiladelphia.github.io/patterns/dist/0.12.1/css/patterns.css">
   <link rel='icon' type='image/x-icon' href="//cityofphiladelphia.github.io/patterns/images/favicon.ico">
@@ -18,13 +19,12 @@ summary: Tracking PDF document downloads for your department
   <link rel="import" href="elements/ga-chart.html">
   <link rel="import" href="elements/ga-viewpicker.html">
   <link rel="import" href="elements/ga-datepicker.html">
-<!--  {% include ga-snippet.html %}-->
+  
 </head>
 <body>
   {% include header.html %}
   <div class="divider"></div>
   <ga-dashboard>
-
     <section id="controls">
       <ga-viewpicker></ga-viewpicker>
       <ga-datepicker
@@ -35,14 +35,14 @@ summary: Tracking PDF document downloads for your department
 
     <section id="charts">
       <div class="1-three">
-        <ga-chart
+<!--        <ga-chart
           title="Timeline"
-          type="LINE"
+          type="AREA"
           metrics="ga:pageviews"
           dimensions="ga:date"
           sort="-ga:date"
           filters="ga:pagePath=~(PDF|pdf)">
-        </ga-chart>
+        </ga-chart>-->
       </div>
       <div class="2-three">
         <ga-chart
