@@ -7,7 +7,7 @@ summary: A brief overview of analytics relevant to department content
 <html>
 <head>
   <title>City of Philadelphia &mdash; Analytics Dashboard</title>
-  <link rel="stylesheet" href="//cityofphiladelphia.github.io/patterns/dist/0.11.1/css/patterns.css">
+  <link rel="stylesheet" href="//cityofphiladelphia.github.io/patterns/dist/0.12.1/css/patterns.css">
   <link rel='icon' type='image/x-icon' href="//cityofphiladelphia.github.io/patterns/images/favicon.ico">
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Open+Sans:700,400,300' rel='stylesheet'>
@@ -18,19 +18,14 @@ summary: A brief overview of analytics relevant to department content
   <link rel="import" href="elements/ga-chart.html">
   <link rel="import" href="elements/ga-viewpicker.html">
   <link rel="import" href="elements/ga-datepicker.html">
-<!--  {% include ga-snippet.html %}-->
+
 </head>
 <body>
-  <header class="Banner">
-    <div class="small-24 medium-24 column">
-      <a href="http://alpha.phila.gov"><img src="//cityofphiladelphia.github.io/patterns/images/city-of-philadelphia-logo.png" class="logo no-scale" alt="City of Philadelphia"></a>
-      <span class="page-title">{{ page.title }}</span>
-    <ga-auth clientid="{{ site.client_id }}"></gauth>
-    </div>   
-  </header>
+
+  {% include header.html %}
+
   <div class="divider"></div>
   <ga-dashboard>
-
     <section id="controls">
       <ga-viewpicker></ga-viewpicker>
       <ga-datepicker

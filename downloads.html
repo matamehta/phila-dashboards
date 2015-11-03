@@ -6,7 +6,6 @@ summary: Tracking PDF document downloads for your department
 <!doctype html>
 <html>
 <head>
-  
   <title>City of Philadelphia &mdash; Analytics Dashboard</title>
   <link rel="stylesheet" href="//cityofphiladelphia.github.io/patterns/dist/0.12.1/css/patterns.css">
   <link rel='icon' type='image/x-icon' href="//cityofphiladelphia.github.io/patterns/images/favicon.ico">
@@ -22,7 +21,9 @@ summary: Tracking PDF document downloads for your department
   
 </head>
 <body>
+  
   {% include header.html %}
+  
   <div class="divider"></div>
   <ga-dashboard>
     <section id="controls">
@@ -48,8 +49,8 @@ summary: Tracking PDF document downloads for your department
         <ga-chart
           title="Downloads"
           type="TABLE"
-          metrics="ga:pageviews, ga:sessions"
-          dimensions="ga:pageTitle,ga:pagePath"
+          metrics="ga:pageviews"
+          dimensions="ga:pageTitle,ga:pagePath,ga:dimension1"
           sort="-ga:pageviews"
           filters="ga:pagePath=~(PDF|pdf)"
           maxResults="25">
@@ -67,7 +68,7 @@ summary: Tracking PDF document downloads for your department
 <!--<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.1/js/foundation.min.js"></script>-->
 <!--<script src="//cityofphiladelphia.github.io/patterns/dist/0.11.1/js/patterns.min.js"></script>-->
 <script>
-  $(document).foundation();
+ // $(document).foundation();
 </script>
 </body>
 </html>
