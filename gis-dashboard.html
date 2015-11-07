@@ -1,6 +1,6 @@
 ---
-title: PDF Downloads
-summary: Tracking PDF document downloads for your department
+title: Department Dashboard MVP
+summary: A brief overview of analytics relevant to department content
 ---
 
 <!doctype html>
@@ -18,12 +18,12 @@ summary: Tracking PDF document downloads for your department
   <link rel="import" href="elements/ga-chart.html">
   <link rel="import" href="elements/ga-viewpicker.html">
   <link rel="import" href="elements/ga-datepicker.html">
-  
+
 </head>
 <body>
-  
+
   {% include header.html %}
-  
+
   <div class="divider"></div>
   <ga-dashboard>
     <section id="controls">
@@ -35,19 +35,54 @@ summary: Tracking PDF document downloads for your department
     </section>
 
     <section id="charts">
-      <div class="1-three">
-      </div>
-      <div class="2-three">
-        <ga-chart
-          title="Downloads"
-          type="TABLE"
-          metrics="ga:pageviews"
-          dimensions="ga:pageTitle,ga:pagePath,ga:dimension1"
-          sort="-ga:pageviews"
-          filters="ga:pagePath=~(PDF|pdf)"
-          maxResults="25">
-        </ga-chart>
-      </div>
+      <ga-chart
+        title="Timeline"
+        type="LINE"
+        metrics="ga:sessions, ga:users, ga:pageviews"
+        dimensions="ga:date">
+      </ga-chart>
+
+      <ga-chart
+        title="Operating System"
+        type="PIE"
+        metrics="ga:sessions"
+        dimensions="ga:operatingSystem">
+      </ga-chart>
+
+      <ga-chart
+        title="Top Browsers"
+        type="BAR"
+        metrics="ga:sessions"
+        dimensions="ga:browser"
+        sort="-ga:sessions"
+        maxResults="5">
+      </ga-chart>
+            
+      <ga-chart
+        title="Devices"
+        type="PIE"
+        metrics="ga:sessions"
+        dimensions="ga:deviceCategory"
+        sort="-ga:sessions"
+        maxResults="5">
+      </ga-chart>
+
+      <ga-chart
+        title="Top pages"
+        type="TABLE"
+        metrics="ga:sessions"
+        dimensions="ga:pageTitle"
+        sort="-ga:sessions"
+        maxResults="8">
+      </ga-chart>
+      <ga-chart
+        title="Sources"
+        type="TABLE"
+        metrics="ga:sessions, ga:pageviews"
+        dimensions="ga:sourceMedium"
+        sort="-ga:sessions"
+        maxResults="10">
+      </ga-chart>
     </section>
 
   </ga-dashboard>
@@ -60,7 +95,7 @@ summary: Tracking PDF document downloads for your department
 <!--<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.1/js/foundation.min.js"></script>-->
 <!--<script src="//cityofphiladelphia.github.io/patterns/dist/0.11.1/js/patterns.min.js"></script>-->
 <script>
- // $(document).foundation();
+  $(document).foundation();
 </script>
 </body>
 </html>
