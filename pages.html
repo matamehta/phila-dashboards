@@ -1,0 +1,65 @@
+---
+title: All Pages
+summary: List of all pages with traffic in analytics
+---
+
+<!doctype html>
+<html>
+<head>
+  <title>City of Philadelphia &mdash; Analytics Dashboard</title>
+  <link rel="stylesheet" href="//cityofphiladelphia.github.io/patterns/dist/0.12.1/css/patterns.css">
+  <link rel='icon' type='image/x-icon' href="//cityofphiladelphia.github.io/patterns/images/favicon.ico">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:700,400,300' rel='stylesheet'>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script src="assets/js/platform.js"></script>
+  <link rel="import" href="elements/ga-auth.html">
+  <link rel="import" href="elements/ga-dashboard.html">
+  <link rel="import" href="elements/ga-chart.html">
+  <link rel="import" href="elements/ga-viewpicker.html">
+  <link rel="import" href="elements/ga-datepicker.html">
+  
+</head>
+<body>
+  
+  {% include header.html %}
+  
+  <div class="divider"></div>
+  <ga-dashboard>
+    <section id="controls">
+      <ga-viewpicker></ga-viewpicker>
+      <ga-datepicker
+        startDate="30daysAgo"
+        endDate="yesterday">
+      </ga-datepicker>
+    </section>
+
+    <section id="charts">
+      <div class="1-three">
+      </div>
+      <div class="2-three">
+        <ga-chart
+          title="All Pages"
+          type="TABLE"
+          metrics="ga:pageviews,ga:users"
+          dimensions="ga:pageTitle,ga:dimension1"
+          sort="-ga:pageviews"
+          maxResults="50">
+        </ga-chart>
+      </div>
+    </section>
+
+  </ga-dashboard>
+
+{% include source-link.html %}
+
+<!-- End Footer -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!--<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.1/js/foundation.min.js"></script>-->
+<!--<script src="//cityofphiladelphia.github.io/patterns/dist/0.11.1/js/patterns.min.js"></script>-->
+<script>
+ // $(document).foundation();
+</script>
+</body>
+</html>
