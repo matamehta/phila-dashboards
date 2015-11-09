@@ -527,6 +527,8 @@ table {
 
 }
 
-.gapi-analytics-data-chart:host {
+.gapi-analytics-data-chart {
+  :host {
   width: 300px!important;
+  }
 }
