@@ -36,6 +36,7 @@
         });
         gapi.analytics.auth.on('success', function() {
           document.body.classList.add('ga-embed-authorized');
+          console.log(gapi.analytics.auth.getUserProfile());
           self.fire('ga-embed-authorize');
         });
       }
