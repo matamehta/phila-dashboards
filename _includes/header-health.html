@@ -9,16 +9,12 @@
 
             <img src="//cityofphiladelphia.github.io/patterns/images/city-of-philadelphia-logo.png" alt="City of Philadelphia" class="logo show-for-medium-up">
           </a>
-<!--
-          <h1 class="site-title">phila.gov</h1>
-          <h2 class="site-description">City of Philadelphia</h2>
--->
         </div>
         <div class="small-18 columns">
           <div class="page-title-container">
             <a href="#/">
               <h1 class="page-title">{{ page.title }}</h1>
-              <h2 class="page-subtitle">An optional subtitle</h2>
+              <h2 class="page-subtitle">{{ page.summary }}</h2>
             </a>
           </div>
         </div>
@@ -26,16 +22,58 @@
     </div>
     <div class="large-8 columns">
       <nav>
-        <label for="select">Select</label>
-  <select id="select">
-    <optgroup label="Option Group">
-        <option>Option One</option>
-        <option>Option Two</option>
-        <option>Option Three</option>
-    </optgroup>
-</select> 
+        <br>
+        <a href="#" data-reveal-id="modal-name" class="button">About</a>
+        
+        <a href="dictionary.html" class="button">Dictionary</a>
+
+
+        <div id="modal-name" class="reveal-modal" data-reveal aria-labelledby="modal-title" aria-hidden="true" role="dialog">
+          <h1 id="modal-title">About the CHA</h1>
+          <p>
+            The CHA is a systematic assessment of population health in Philadelphia, highlighting key public health challenges and assets and informing local public health programs, policies, and partnerships.</p>
+          <p>The CHA includes indicators reflecting health behaviors, health conditions, health care factors, and social and environmental determinants of health.</p>
+          <ol>
+            <li>Comparing Philadelphia data to other large cities/counties</li>
+            <li>Looking at Philadelphia data over time, from 2000 to the present</li>
+            <li>Analyzing the latest year of Philadelphia data by race/ethnicity</li>
+            <li>Analyzing the latest year of Philadelphia data by planning districts</li>
+          </ol>
+
+
+          <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+        </div>
       </nav>
     </div>
-  </div>
+  </div><br><br>
+  <div class="divider" style="margin-left: 0px;"></div>
+
+  <label for="select"> </label><br>
+  <select id="select">
+    <!--
+<optgroup label="Measures">
+<option>Social determinants of health</option>
+<option>Summary health measures</option>
+<option>Tobacco and alcohol</option>
+<option>Obesity</option>
+<option>Cardiovascular disease</option>
+<option>HIV</option>
+<option>Teen sexual health</option>
+<option>Maternal and infant health</option>
+<option>Child health</option>
+<option>Access to care</option>
+<option>Cancer screening and prevention</option>
+<option>Environmental health</option>
+<option>Violence</option>
+<option>Mental health and substance abuse</option>
+<option>Built environment</option>
+</optgroup>
+-->
+    <optgroup label="Categories">
+      <option><a href="health-embed.html">Racial Disparity</a></option>
+      <option>Citywide Over Time</option>
+      <option>Planning Districts</option>
+    </optgroup>
+  </select> 
 </header>
 <!-- End header -->

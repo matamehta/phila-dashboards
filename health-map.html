@@ -14,23 +14,26 @@ summary: Philadelphia Department of Public Health
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-
+  
   {% include header-health.html %}
+  {% include tag-manager.html %}
 
-<div class="small-24 columns">
-  <h2>Data Dictionary</h2>
-  <iframe seamless="true" width="100%" height="7000px" scrolling="no" frameborder="0" src="https://docs.google.com/document/d/1g_yCZe7C0ViYJPJE5xQxw4cedn5mFIxz62dxzFGVBoE/pub?embedded=true"></iframe>
-</div>
+  <div class="small-24 columns">
+    <iframe seamless="true" width="100%" height="800px" scrolling="no" frameborder="0" src="http://laurenancona.github.io/health-dashboard/"></iframe>
+    </div>
 
-{% include source-link.html %}
+  </div>
 
-<!-- End Footer -->
+  {% include source-link.html %}
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<!--<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.1/js/foundation.min.js"></script>-->
-<!--<script src="//cityofphiladelphia.github.io/patterns/dist/0.11.1/js/patterns.min.js"></script>-->
-<script>
-  $(document).foundation();
-</script>
+  <!-- End Footer -->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.1/js/foundation.min.js"></script>
+  <script src="//cityofphiladelphia.github.io/patterns/dist/0.11.1/js/patterns.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
 </body>
+
 </html>
