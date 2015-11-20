@@ -35,7 +35,14 @@
           clientid: this.clientid,
         });
         gapi.analytics.auth.on('success', function() {
+          var profile = gapi.analytics.auth.getUserProfile();
           document.body.classList.add('ga-embed-authorized');
+          window.dataLayer = window.dataLayer || [];
+          dataLayer.push({
+            'userEmail' : profile.email,
+            'userName' : profile.name,
+            'userImage' : profile.imageUrl
+          });
           console.log(gapi.analytics.auth.getUserProfile());
           self.fire('ga-embed-authorize');
         });
