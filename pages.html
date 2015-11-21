@@ -25,14 +25,9 @@ summary: By Visitor Traffic
 <body>
   
   {% include header.html %}
+  <div class="medium-24 column">
   
-  <ul class="inline-list">
-    <li><a href="#/">Link 1</a></li>
-    <li><a href="#/">Link 2</a></li>
-    <li><a href="#/">Link 3</a></li>
-    <li><a href="#/">Link 4</a></li>
-    <li><a href="#/">Link 5</a></li>
-  </ul>
+  {% include nav.html %}
   
   <ga-dashboard>
     <section id="controls">
@@ -59,7 +54,7 @@ summary: By Visitor Traffic
     </section>
 
   </ga-dashboard>
-
+  </div>
 {% include source-link.html %}
 
 <!-- End Footer -->
@@ -67,5 +62,6 @@ summary: By Visitor Traffic
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation.min.js"></script>
   <script src="//cityofphiladelphia.github.io/patterns/dist/0.12.4/js/patterns.min.js"></script>
+  <script src="js/vendor/anchorme.js"></script>
 </body>
 </html>

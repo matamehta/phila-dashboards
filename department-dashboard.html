@@ -23,7 +23,7 @@ summary: By Device and Platform
 </head>
   <body>
     
-  {% include ga-snippet.html %}
+  {% include tag-manager.html %}
     
   {% include header.html %}
   
@@ -44,6 +44,9 @@ summary: By Device and Platform
     </section>
   </nav>
   <div class="medium-24 column">
+    
+    {% include nav.html %}
+    
   <ga-dashboard>
     <section id="controls">
       <ga-viewpicker></ga-viewpicker>
@@ -58,7 +61,8 @@ summary: By Device and Platform
         title="Timeline"
         type="LINE"
         metrics="ga:sessions, ga:users, ga:pageviews"
-        dimensions="ga:date">
+        dimensions="ga:date"
+        filters="">
       </ga-chart>
 
       <ga-chart
@@ -74,7 +78,8 @@ summary: By Device and Platform
         metrics="ga:sessions"
         dimensions="ga:browser"
         sort="-ga:sessions"
-        maxResults="5">
+        maxResults="5"
+        filters="">
       </ga-chart>
             
       <ga-chart
