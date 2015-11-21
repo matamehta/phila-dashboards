@@ -1,12 +1,4 @@
 
- Anchorme.js
- 0.3
- Copyright(c) 2015 Ali Saleem <ali.a.saleem@outlook.com>
- MIT Licensed. http://www.opensource.org/licenses/mit-license.php
-
-https://github.com/ali-saleem/anchorme.js
-
-
 var anchorme = {};
 anchorme.occurrences = function (string, subString, allowOverlapping){
 
