@@ -1,6 +1,6 @@
 destination: ./site
 
-baseurl: #/phila-dashboards
+baseurl: /phila-dashboards
 
 # For running locally the path string should be empty.
 # path:
