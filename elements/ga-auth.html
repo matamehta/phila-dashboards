@@ -34,6 +34,7 @@
           container: this.$.container,
           clientid: this.clientid,
         });
+        // Get user profile and push it to the data layer
         gapi.analytics.auth.on('success', function() {
           var profile = gapi.analytics.auth.getUserProfile();
           document.body.classList.add('ga-embed-authorized');
@@ -41,7 +42,9 @@
           dataLayer.push({
             'userEmail' : profile.email,
             'userName' : profile.name,
-            'userImage' : profile.imageUrl
+            'userImage' : profile.imageUrl,
+            'loggedInState' : 'true',
+            'event' : 'loggedIn'
           });
           console.log(gapi.analytics.auth.getUserProfile());
           self.fire('ga-embed-authorize');
