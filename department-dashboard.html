@@ -1,8 +1,10 @@
---- title: Department Web Analytics Overview summary: By Device and Platform ---
+---
+title: Department Web Analytics Overview
+summary: By Device and Platform 
+---
 
 <!doctype html>
 <html>
-
 <head>
   <title>City of Philadelphia &mdash; Analytics Dashboard</title>
   <link rel="stylesheet" href="//cityofphiladelphia.github.io/patterns/dist/0.12.4/css/patterns.css">
@@ -19,51 +21,102 @@
   <link rel="import" href="elements/ga-datepicker.html">
 
 </head>
-
-<body>
-
-  {% include tag-manager.html %} {% include header.html %}
-
-
+  <body>
+    
+  {% include tag-manager.html %}
+    
+  {% include header.html %}
+  
+  <nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name"></li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+      <ul class="right">
+        <li class="has-dropdown"><a href="#">Dashboards</a>
+          <ul class="dropdown">
+            <li><a href="downloads.html">Downloads</a></li>
+            <li><a href="pages.html">All Pages</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </nav>
   <div class="medium-24 column">
-
+    
     {% include nav.html %}
+    
+  <ga-dashboard>
+    <section id="controls">
+      <ga-viewpicker></ga-viewpicker>
+      <ga-datepicker
+        startDate="30daysAgo"
+        endDate="yesterday">
+      </ga-datepicker>
+    </section>
 
-    <ga-dashboard>
-      <section id="controls">
-        <ga-viewpicker></ga-viewpicker>
-        <ga-datepicker startDate="30daysAgo" endDate="yesterday">
-        </ga-datepicker>
-      </section>
+    <section id="charts">
+      <ga-chart
+        title="Timeline"
+        type="LINE"
+        metrics="ga:sessions, ga:users, ga:pageviews"
+        dimensions="ga:date"
+        filters="">
+      </ga-chart>
 
-      <section id="charts">
-        <ga-chart title="Timeline" type="LINE" metrics="ga:sessions, ga:users, ga:pageviews" dimensions="ga:date" filters="">
-        </ga-chart>
+      <ga-chart
+        title="Operating System"
+        type="PIE"
+        metrics="ga:sessions"
+        dimensions="ga:operatingSystem">
+      </ga-chart>
 
-        <ga-chart title="Operating System" type="PIE" metrics="ga:sessions" dimensions="ga:operatingSystem">
-        </ga-chart>
+      <ga-chart
+        title="Top Browsers"
+        type="BAR"
+        metrics="ga:sessions"
+        dimensions="ga:browser"
+        sort="-ga:sessions"
+        maxResults="5"
+        filters="">
+      </ga-chart>
+            
+      <ga-chart
+        title="Devices"
+        type="PIE"
+        metrics="ga:sessions"
+        dimensions="ga:deviceCategory"
+        sort="-ga:sessions"
+        maxResults="5">
+      </ga-chart>
 
-        <ga-chart title="Top Browsers" type="BAR" metrics="ga:sessions" dimensions="ga:browser" sort="-ga:sessions" maxResults="5" filters="">
-        </ga-chart>
+      <ga-chart
+        title="Top pages"
+        type="TABLE"
+        metrics="ga:sessions"
+        dimensions="ga:pageTitle"
+        sort="-ga:sessions"
+        maxResults="8">
+      </ga-chart>
+      <ga-chart
+        title="Sources"
+        type="TABLE"
+        metrics="ga:sessions, ga:pageviews"
+        dimensions="ga:sourceMedium"
+        sort="-ga:sessions"
+        maxResults="10">
+      </ga-chart>
+    </section>
 
-        <ga-chart title="Devices" type="PIE" metrics="ga:sessions" dimensions="ga:deviceCategory" sort="-ga:sessions" maxResults="5">
-        </ga-chart>
+  </ga-dashboard>
 
-        <ga-chart title="Top pages" type="TABLE" metrics="ga:sessions" dimensions="ga:pageTitle" sort="-ga:sessions" maxResults="8">
-        </ga-chart>
-        <ga-chart title="Sources" type="TABLE" metrics="ga:sessions, ga:pageviews" dimensions="ga:sourceMedium" sort="-ga:sessions" maxResults="10">
-        </ga-chart>
-      </section>
+{% include source-link.html %}
 
-    </ga-dashboard>
-
-    {% include source-link.html %}
-
-    <!-- End Footer -->
+<!-- End Footer -->
   </div>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation.min.js"></script>
   <script src="//cityofphiladelphia.github.io/patterns/dist/0.12.4/js/patterns.min.js"></script>
 </body>
-
 </html>
