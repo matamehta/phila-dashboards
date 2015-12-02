@@ -8,8 +8,9 @@ baseurl: /phila-dashboards
 
 # Update this with your client ID.
 # https://developers.google.com/analytics/devguides/reporting/embed/v1/devguide#client-id
-client_id: 105615440679-1619qddo3h0ufltrghvfot95roq8tg0k.apps.googleusercontent.com
+client_id: 105615440679-9nda6c33lljuin6tn7g08er3r7lmimah.apps.googleusercontent.com
+
 # 105615440679-1qifvu02lj19d2f3nc0es6lu9lne1urn.apps.googleusercontent.com
 
 # In Google Developers Console, project name is 
-# Phila Dashboards
+# phila-dashboards
